@@ -23,6 +23,11 @@ pgdown_dir = os.path.join(current_dir, 'pgdown')
 pgdown_lib_dir = os.path.join(pgdown_dir, 'lib')
 updated_files_dir = os.path.join(current_dir, 'updated_files')  # 新增更新文件目录
 
+print(f"当前目录：{current_dir}")
+print(f"pgdown目录：{pgdown_dir}")
+print(f"pgdown_lib目录：{pgdown_lib_dir}")
+print(f"更新文件目录：{updated_files_dir}")
+
 # 创建Telegram客户端
 client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
@@ -44,8 +49,6 @@ def copy_with_timestamps(src, dst):
 
 async def main():
     print("开始获取频道最新消息...")
-    print(f"当前目录：{current_dir}")
-    print(f"更新文件目录：{updated_files_dir}")
 
     # 创建更新文件目录
     if not os.path.exists(updated_files_dir):
