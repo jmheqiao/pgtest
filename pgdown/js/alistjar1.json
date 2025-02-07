@@ -1,0 +1,10 @@
+{
+  "drives": [
+    {
+      "name": "alist1.jar",
+      "search": true,
+      "searchable": true,
+      "server": "https://p01--xy2023a--yp49qlrxv5xm.code.run"
+    }
+  ]
+}
