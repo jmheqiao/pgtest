@@ -8,6 +8,7 @@ on:
 # 定时任务，每 30 分钟运行一次
   schedule:
     - cron: '*/30 * * * *'
+
 jobs:
   build:
     runs-on: ubuntu-latest
