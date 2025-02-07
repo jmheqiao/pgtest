@@ -5,10 +5,9 @@ on:
   push:
     branches:
       - main
-  # 定时任务，每天午夜运行
+# 定时任务，每 30 分钟运行一次
   schedule:
-    - cron: '0 0 * * *'
-
+    - cron: '*/30 * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
