@@ -1,4 +1,4 @@
-name: 更新版本号
+name: Update JSON from ZIP Filename
 
 on:
   workflow_dispatch:  # 手动触发
