@@ -1,47 +1,36 @@
 name: Update JSON from ZIP Filename
 
 on:
-  workflow_dispatch:  # 手动触发
-  push:
-    branches: [ main ]  # 当推送到 main 分支时触发
+  # 每天定时运行
+  schedule:
+    - cron: '30 22 * * *'  # 每天 22:30 运行
+  # 手动触发
+  workflow_dispatch:
 
 jobs:
-  update-json:
-    runs-on: ubuntu-latest  # 使用 Ubuntu 环境
+  build:
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set ZIP Filename
-      env:
-        ZIP_FILENAME: pg.202512152159.zip  # 示例 ZIP 文件名，可以根据需要动态设置
-      run: |
-        echo "ZIP_FILENAME=$ZIP_FILENAME" >> $GITHUB_ENV
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-    - name: Extract ZIP Filename Part
-      run: |
-        # 提取 "pg." 后的所有字符
-        pg_part=$(echo "$ZIP_FILENAME" | awk -F'pg.' '{print $2}' | awk -F'.zip' '{print $1}')
-        echo "pg_part=$pg_part" >> $GITHUB_ENV
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests  # 添加额外的依赖（如果有）
 
-    - name: Modify JSON File
-      run: |
-        # 确保 jq 工具已安装
-        sudo apt-get install -y jq
+      - name: Run t1.py
+        run: |
+          python t1.py
 
-        # 修改 t2a.json 文件并生成 t1.json
-        jq --arg pg "$pg_part" '.key = "💓TG豆瓣+\($pg)"' pgdown/t2a.json > pgdown/t1.json
-
-    - name: Output Result
-      run: |
-        echo "Updated t1.json:"
-        cat pgdown/t1.json
-
-    - name: Commit and Push Changes (Optional)
-      run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
-        git add pgdown/t1.json
-        git commit -m "Update t1.json based on ZIP filename"
-        git push origin main
+      - name: Save generated files  # 将生成的文件上传为工作流构件
+        uses: actions/upload-artifact@v3
+        with:
+          name: generated-files
+          path: pgdown/t1.json
