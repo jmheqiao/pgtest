@@ -1,5 +1,5 @@
 {
-    "spider": "./pg.jar",
+    "version": "20250212-1117",
     "sites": [
         {
             "key": "豆瓣",
@@ -1729,6 +1729,7 @@
             ]
         }
     ],
+    "spider": "./pg.jar",
     "doh": [
         {
             "name": "Google",
