@@ -1,9 +1,9 @@
 {
-    "version": "20250212-1117",
+    "spider": "./pg.jar",
     "sites": [
         {
             "key": "豆瓣",
-            "name": "版本号",
+            "name": "💓20250212-1117💓",
             "type": 3,
             "api": "csp_Douban",
             "searchable": 0,
@@ -13,7 +13,7 @@
         },
         {
             "key": "TGDouban",
-            "name": "💓TG豆瓣",
+            "name": "💓TG豆瓣💓",
             "type": 3,
             "api": "csp_TGDouban",
             "timeout": 120,
@@ -1729,7 +1729,6 @@
             ]
         }
     ],
-    "spider": "./pg.jar",
     "doh": [
         {
             "name": "Google",
