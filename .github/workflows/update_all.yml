@@ -12,23 +12,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  update_files_job:
+  update_PG_files:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up Python
+    - name: Set up Python 3.9
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
 
-    - name: Install dependencies
+    - name: Install dependencies for PGdown.py
       run: |
         python -m pip install --upgrade pip
         pip install telethon
 
-    - name: Set environment variables
+    - name: Set environment variables for PGdown.py
       run: |
         echo "API_ID=${{ secrets.API_ID }}" >> $GITHUB_ENV
         echo "API_HASH=${{ secrets.API_HASH }}" >> $GITHUB_ENV
@@ -66,19 +66,19 @@ jobs:
         git commit -m "Update files from Telegram" || true
         git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/jmheqiao/pgtest.git main
 
-  t1_kimi_job:
+  update_t1_json:
     runs-on: ubuntu-latest
-    needs: update_files_job
+    needs: update_PG_files
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
+      - name: Install dependencies for t1.py
         run: |
           python -m pip install --upgrade pip
           pip install requests  # 添加额外的依赖（如果有）
