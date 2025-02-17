@@ -1,9 +1,9 @@
 {
-    "version": "20250215-2112",
+    "version": "20250217-1434",
     "sites": [
         {
             "key": "豆瓣",
-            "name": "💓20250215-2112💓",
+            "name": "💓20250217-1434💓",
             "type": 3,
             "api": "csp_Douban",
             "searchable": 0,
@@ -438,7 +438,7 @@
             "changeable": 1,
             "filterable": 1,
             "timeout": 60,
-            "ext": "./lib/tokenm.json$$$http://www.gying.net$$$noproxy$$$1$$$./lib/guanying.txt$$$GUANYING"
+            "ext": "./lib/tokenm.json$$$https://www.gying.net$$$noproxy$$$1$$$./lib/guanying.txt$$$GUANYING"
         },
         {
             "key": "FourKFM",
@@ -460,7 +460,7 @@
             "changeable": 1,
             "filterable": 1,
             "timeout": 60,
-            "ext": "./lib/tokenm.json$$$http://xzyshd.com$$$proxy$$$1"
+            "ext": "./lib/tokenm.json$$$https://xzyshd.com$$$proxy$$$1"
         },
         {
             "key": "Wogg",
@@ -482,7 +482,7 @@
             "changeable": 1,
             "filterable": 1,
             "timeout": 60,
-            "ext": "./lib/tokenm.json$$$http://tv.yydsys.top/$$$proxy$$$1$$$./lib/wogg.json$$$WNLG"
+            "ext": "./lib/tokenm.json$$$https://tv.yydsys.top/$$$proxy$$$1$$$./lib/wogg.json$$$WNLG"
         },
         {
             "key": "蜡笔网盘",
@@ -493,7 +493,7 @@
             "changeable": 1,
             "filterable": 1,
             "timeout": 60,
-            "ext": "./lib/tokenm.json$$$http://duopan.fun/$$$noproxy$$$1$$$./lib/wogg.json$$$LABI"
+            "ext": "./lib/tokenm.json$$$https://duopan.fun/$$$noproxy$$$1$$$./lib/wogg.json$$$LABI"
         },
         {
             "key": "Mogg",
@@ -504,7 +504,7 @@
             "changeable": 1,
             "filterable": 1,
             "timeout": 60,
-            "ext": "./lib/tokenm.json$$$http://www.mogg.top/$$$noproxy$$$1$$$./lib/wogg.json$$$MOGG"
+            "ext": "./lib/tokenm.json$$$https://www.mogg.top/$$$noproxy$$$1$$$./lib/wogg.json$$$MOGG"
         },
         {
             "key": "Xiaomi",
@@ -515,7 +515,7 @@
             "changeable": 1,
             "filterable": 1,
             "timeout": 60,
-            "ext": "./lib/tokenm.json$$$http://www.mucpan.cc/$$$noproxy$$$1$$$./lib/wogg.json$$$XIAOMI"
+            "ext": "./lib/tokenm.json$$$https://www.mucpan.cc/$$$noproxy$$$1$$$./lib/wogg.json$$$XIAOMI"
         },
         {
             "key": "至臻|网盘",
@@ -526,7 +526,7 @@
             "changeable": 1,
             "filterable": 1,
             "timeout": 60,
-            "ext": "./lib/tokenm.json$$$http://mihdr.top/$$$noproxy$$$1$$$./lib/wogg.json$$$ZHIZHEN"
+            "ext": "./lib/tokenm.json$$$https://mihdr.top/$$$noproxy$$$1$$$./lib/wogg.json$$$ZHIZHEN"
         },
         {
             "key": "Guazi",
@@ -548,7 +548,7 @@
             "changeable": 1,
             "filterable": 1,
             "timeout": 60,
-            "ext": "./lib/tokenm.json$$$http://www.hdmoli.pro/$$$proxy$$$1$$$./lib/moli.json"
+            "ext": "./lib/tokenm.json$$$https://www.hdmoli.pro/$$$proxy$$$1$$$./lib/moli.json"
         },
         {
             "key": "Ppxzy",
@@ -559,7 +559,7 @@
             "changeable": 1,
             "filterable": 1,
             "timeout": 60,
-            "ext": "./lib/tokenm.json$$$http://ppxzy.ink$$$proxy$$$1"
+            "ext": "./lib/tokenm.json$$$https://ppxzy.ink$$$proxy$$$1"
         },
         {
             "key": "ddys",
@@ -570,7 +570,7 @@
             "changeable": 1,
             "filterable": 1,
             "timeout": 60,
-            "ext": "./lib/tokenm.json$$$http://ddys.pro/$$$proxy$$$1$$$"
+            "ext": "./lib/tokenm.json$$$https://ddys.pro/$$$proxy$$$1$$$"
         },
         {
             "key": "美剧迷",
@@ -581,7 +581,7 @@
             "changeable": 1,
             "filterable": 1,
             "timeout": 120,
-            "ext": "./lib/tokenm.json$$$http://www.meijumi.net/$$$proxy$$$1"
+            "ext": "./lib/tokenm.json$$$https://www.meijumi.net/$$$proxy$$$1"
         },
         {
             "key": "Libvio",
@@ -592,7 +592,7 @@
             "changeable": 1,
             "filterable": 1,
             "timeout": 60,
-            "ext": "./lib/tokenm.json$$$http://www.libvio.fun/$$$null"
+            "ext": "./lib/tokenm.json$$$https://www.libvio.fun/$$$null"
         },
         {
             "key": "Bt0",
